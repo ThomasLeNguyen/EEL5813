@@ -1,0 +1,80 @@
+% STEPS TO USE FUNCTION percept1p to solve Prob. P4.4
+%
+% FIRST copy the percept1p.m file to a know directory
+% for example, to C:\5813
+% THEN change directory (in Matlab) TO THAT directory
+cd C:\5813
+% check you are in the desired directory
+pwd
+% it should display the path C:\5813
+% Check percept1p.m is there
+dir
+% the file name   percep1p.m should appear 
+% % % % % % % % % % % % % % % % % % 
+% NOW SOLVE PROBLEM P4.4 (page 4-26 of book):
+% Create the 4 pattern vectors and their targets
+%
+p1 = [2 ; 2]
+t1 = 0
+%
+p2 = [1 ; -2]
+t2 = 1
+%
+p3 = [ -2 ;2]
+t3 = 0
+%
+p4 = [ -1 ;1]
+t4 = 1
+%
+% INITIALIZE WEIGHTS AND BIAS
+Wold = [0 , 0]
+bold = 0
+%
+%%% EPOCH 1
+display(' EPOCH 1 ')
+% Present (learn from) p1
+display('pattern p1')
+[Wnew, bnew,e] = percept1p(Wold, bold, p1, t1);
+% Update weights and bias:
+Wold = Wnew
+bold = bnew
+%
+% Present (learn from) p2
+display('pattern p2')
+[Wnew, bnew,e] = percept1p(Wold, bold, p2, t2);
+% Update weights and bias:
+Wold = Wnew
+bold = bnew
+%
+% Present (learn from) p3
+display('pattern p3')
+[Wnew, bnew,e] = percept1p(Wold, bold, p3, t3);
+% Update weights and bias:
+Wold = Wnew
+bold = bnew
+%
+% Present (learn from) p4
+display('pattern p4')
+[Wnew, bnew,e] = percept1p(Wold, bold, p4, t4);
+% Update weights and bias:
+Wold = Wnew
+bold = bnew
+%
+%
+%%% EPOCH 2
+display(' EPOCH 2 ')
+% Present (learn from) p1
+display('pattern p1')
+[Wnew, bnew,e] = percept1p(Wold, bold, p1, t1);
+% Update weights and bias:
+Wold = Wnew
+bold = bnew
+%
+% Present (learn from) p2
+display('pattern p2')
+[Wnew, bnew,e] = percept1p(Wold, bold, p2, t2);
+% Update weights and bias:
+Wold = Wnew
+bold = bnew
+%
+display('You can continue with pattern p3 in EPOCH 2, etc')
